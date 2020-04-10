@@ -1,18 +1,18 @@
-# node-js-getting-started
+# miropad-oauth-service
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+A dead-simple Node.js app using [Express 4](http://expressjs.com/) that gets an oauth token for authenticated requests on the [Github API](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow)
 
-This application supports the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+This application is hosted on Heroku.
 
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
-$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
+$ git clone https://github.com/teomrd/miropad-oauth-service.git # or clone your own fork
+$ cd miropad-oauth-service
 $ npm install
-$ npm start
+$ npm run dev
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
@@ -24,16 +24,3 @@ $ heroku create
 $ git push heroku master
 $ heroku open
 ```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
