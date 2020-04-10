@@ -1,8 +1,15 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 
-express()
+const app = express();
+
+app.use(cors({
+  origin: process.env.MIROPAD_URL
+}));
+
+app
   .get('/', (req, res) => res.json({
     hello: "world"
   }))
@@ -18,10 +25,17 @@ express()
           "Content-Type": "application/json"
         }
       })
-    .then(resp => resp.json())
     .then(response => {
-      console.log('response', response);
-      const { access_token } = response;
+      console.log("response", response);
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      // Read the response as json.
+      return response.json();
+    })
+    .then(jsonResponse => {
+      console.log('jsonResponse', jsonResponse);
+      const { access_token } = jsonResponse;
       return res.json({
         token: access_token
       });
