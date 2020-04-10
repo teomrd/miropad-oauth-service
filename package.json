@@ -1,13 +1,15 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.3.0",
-  "description": "A sample Node.js app using Express 4",
+  "name": "miropad-oauth-service",
+  "version": "0.1",
+  "description": "A tiny REST app that get an access token for the GitHub API",
   "engines": {
     "node": "12.x"
   },
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "dev": "node src/index.js",
+    "start": "heroku open",
+    "deploy": "git push heroku master"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -16,12 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/teomrd/miropad-oauth-service"
   },
   "keywords": [
     "node",
     "heroku",
-    "express"
-  ],
-  "license": "MIT"
+    "express",
+    "github",
+    "oauth"
+  ]
 }
