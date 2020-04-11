@@ -17,7 +17,7 @@ app
     const { code , state } = req.query;
     
     fetch(
-    `https://github.com/login/oauth/access_token?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}&code=${code}&state=${state}`,
+    `https://github.com/login/oauth/access_token?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}&code=${code}&state=${state}&redirect_uri=${process.env.MIROPAD_CALLBACK_URL}`,
       {
         method: "POST",
         headers: {
